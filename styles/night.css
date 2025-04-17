@@ -54,3 +54,21 @@
 .circles.night{
     background-color:#f8f8f8;
 }
+/*  */
+.h2.night{
+    background-image: linear-gradient(transparent 50%, rgba(255, 192, 216, 0.308) 50%, rgba(255, 192, 203, 0.24) 85%, transparent 85%, transparent 100%);
+}
+.h2.night{
+    color: #FFFFFF;
+}
+
+.bottom p.night{
+    color: #FFFFFF;
+}
+.bottom span p.night{
+    color: white;
+}
+.bb.night{
+    color: white;
+    background-color: #4C3A69;
+}
