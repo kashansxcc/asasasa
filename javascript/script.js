@@ -9,7 +9,6 @@ try {
     console.log(error)
 }
 
-
 let hamburg2 = document.querySelector(".hamburg")
 let toggle = document.querySelector(".toggle");
 let circle = document.querySelector(".circle");
@@ -63,8 +62,24 @@ function mode2() {
         document.querySelectorAll(".circles").forEach(e => {
             e.classList.toggle("night")
         });
+        document.querySelectorAll(".h2").forEach(e => {
+            e.classList.toggle("night")
+        })
+        document.querySelectorAll(".paragraphs").forEach(e => {
+            e.classList.toggle("night")
+        })
+        const element = document.querySelector('.a');
+        const beforeStyle = window.getComputedStyle(element, '::before');
+        beforeStyle.classList.toggle("night")
+
     }
     else {
+        const element = document.querySelector('.a');
+        const beforeStyle = window.getComputedStyle(element, '::before');
+        beforeStyle.classList.toggle("night")
+        document.querySelectorAll(".h2").forEach(e => {
+            e.classList.toggle("night")
+        })
         document.querySelector(".left").classList.toggle("night")
         document.querySelectorAll(".circles").forEach(e => {
             e.classList.toggle("night")
@@ -81,6 +96,7 @@ function mode2() {
         document.querySelectorAll(".boxes").forEach(e => {
             e.classList.toggle("night")
         });
+
         document.querySelector(".shadow").classList.toggle("night")
         document.querySelector(".right").classList.toggle("night")
         document.querySelector(".light").classList.toggle("night")
@@ -257,25 +273,25 @@ const observer = new IntersectionObserver((entries, observer) => {
 const divs = document.querySelectorAll('.boxes');
 divs.forEach(div => observer.observe(div));
 
-const divs1 = document.querySelectorAll(".hero").forEach(div=>{
+const divs1 = document.querySelectorAll(".hero").forEach(div => {
     observer.observe(div)
 })
-const divs3 = document.querySelectorAll(".computer_animation").forEach(div=>{
+const divs3 = document.querySelectorAll(".computer_animation").forEach(div => {
     observer.observe(div)
 })
-const divs4 = document.querySelectorAll(".lamp_anim").forEach(div=>{
+const divs4 = document.querySelectorAll(".lamp_anim").forEach(div => {
     observer.observe(div)
 })
 
-let observer2 = new IntersectionObserver((entries,observer) =>{
-    entries.forEach(entry =>{
+let observer2 = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add("visible")
             observer.unobserve(entry.target)
         }
-    }),{threshold:0.1}
+    }), { threshold: 0.1 }
 })
-const div2 = document.querySelectorAll(".text").forEach(div=>{
+const div2 = document.querySelectorAll(".text").forEach(div => {
     observer2.observe(div)
 })
 fun()
