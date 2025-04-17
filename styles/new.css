@@ -623,7 +623,7 @@
     text-decoration: none;
     position: relative;
 }
-.details a::before{
+.a::before{
     content: "";
     position: absolute;
     top: 5px;
@@ -633,6 +633,9 @@
     background-color: black;
     z-index: 0;
 }
+.a.night::before{
+    background-color: rgb(255, 255, 255);
+}
 .bb{
     background-color: #F7F7F7;
     z-index: 10;
@@ -641,10 +644,14 @@
     height: 3rem;
     text-align: center;
     line-height: 3rem;
+    font-weight: 800;
     transition: transform 0.14s ease;
     border: 1px solid;
     font-size: min(1vw , 22px);
 }
 .bb:hover{
     transform: translate(5px , 5px);
+}
+.a{
+    transition: all 1.3s ease;
 }
